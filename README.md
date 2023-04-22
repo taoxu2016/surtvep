@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # surtvep
 
-`surtvep` is an R package for fitting penalized Newton's method 
-for the time-varying effects model using mAIC, TIC and GIC as information criteria, 
-in particular we span the parameters using B-spline basis functions. Utilities for carrying 
+`surtvep` is an R package for fitting penalized Newton's method
+for the time-varying effects model using mAIC, TIC and GIC as information criteria,
+in particular we span the parameters using B-spline basis functions. Utilities for carrying
 out post-estimation visualization, summarization, and inference are also provided.
 
 # Introduction
@@ -12,10 +11,10 @@ Large-scale time-to-event data derived from national disease registries arise ra
 
 Our package offers several benefits over traditional methods. Firstly, traditional methods for modeling time-varying survival models often rely on expanding the original data into a repeated measurement format. However, even with moderate sample sizes, this leads to a large and computationally burdensome working dataset. Our package addresses this issue by proposing a computationally efficient Kronecker product-based proximal algorithm, which allows for the evaluation of time-varying effects in large-scale studies. Additionally, our package allows for parallel computing and can handle moderate to large sample sizes more efficiently than current methods.
 
-
 In our statistical software tutorial, we address a common issue encountered when analyzing data with binary covariates with near-zero variation. For example, in the SEER prostate cancer data, only 0.6% of the 716,553 patients had their tumors regional to the lymph nodes. In such cases, the associated observed information matrix of a Newton-type method may have a minimum eigenvalue close to zero and a large condition number. Inverting this nearly singular matrix can lead to numerical instability and the corresponding Newton updates may be confined within a small neighborhood of the initial value, resulting in estimates that are far from the optimal solutions. To address this problem, our proposed Proximal-Newtown method utilizes a modified Hessian matrix, which allows for accurate estimation in these scenarios.
 
 ## Models:
+
 <table>
     <tr>
         <th>Method</th>
@@ -39,6 +38,7 @@ In our statistical software tutorial, we address a common issue encountered when
 </table>
 
 ## Penalzation Coefficient Selection Methods:
+
 <table>
     <tr>
         <th>Method</th>
@@ -130,8 +130,8 @@ The SUPPORT dataset is available in the "surtvep" package. The following code wi
     </tr>
 </table>
 
-
 ## Real Datasets:
+
 <table>
     <tr>
         <th>Dataset</th>
@@ -150,10 +150,9 @@ The SUPPORT dataset is available in the "surtvep" package. The following code wi
     </tr>
 </table>
 
-
 # Installation
 
-**Note:** *This package is still in its early stages of development, so please don't hesitate to report any problems you may experience.* 
+**Note:** _This package is still in its early stages of development, so please don't hesitate to report any problems you may experience._
 
 The package only works for R 4.1.0+.
 
@@ -166,7 +165,6 @@ You can install 'surtvep' via:
 
 We recommand to start with <a href="https://um-kevinhe.github.io/surtvep/articles/surtvep.html#quick-start" target="_blank">tutorial</a>, as it provides an overview of the package's usage, including preprocessing, model training, selection of penalization parameters, and post-estimation procedures.
 
-
 ## Detailed tutorial
 
 For detailed tutorial and model paramter explaination, please go to <a href="https://um-kevinhe.github.io/surtvep/index.html" target="_blank">here</a>
@@ -175,13 +173,12 @@ For detailed tutorial and model paramter explaination, please go to <a href="htt
 
 If you encounter any problems or bugs, please contact us at: [lfluo\@umich.edu](mailto:lfluo@umich.edu){.email}, [xuetao\@umich.edu](mailto:xuetao@umich.edu){.email}
 
-
-
 # References
 
-  \[1\] Wenbo Wu, Jeremy M G Taylor, Andrew F Brouwer, Lingfeng Luo, Jian Kang, Hui Jiang and Kevin He. Scalable proximal Methods for cause-specific hazard modeling with time-varying coefficients. *Lifetime Data Analysis*, 28(2):194-218, 2022. \[[paper](https://pubmed.ncbi.nlm.nih.gov/35092553/)\]
+\[1\] Wenbo Wu, Jeremy M G Taylor, Andrew F Brouwer, Lingfeng Luo, Jian Kang, Hui Jiang and Kevin He. Scalable proximal Methods for cause-specific hazard modeling with time-varying coefficients. _Lifetime Data Analysis_, 28(2):194-218, 2022. \[[paper](https://pubmed.ncbi.nlm.nih.gov/35092553/)\]
 
 =======
+
 # surtvep
 
 `surtvep` is an R package for fitting Cox non-proportional hazards models with time-varying coefficients. Both unpenalized procedures (Newton and proximal Newton) and penalized procedures (P-splines and smoothing splines) are included using B-spline basis functions for estimating time-varying coefficients.
@@ -193,10 +190,10 @@ Large-scale time-to-event data derived from national disease registries arise ra
 
 Our package offers several benefits over traditional methods. Firstly, traditional methods for modeling time-varying survival models often rely on expanding the original data into a repeated measurement format. However, even with moderate sample sizes, this leads to a large and computationally burdensome working dataset. Our package addresses this issue by proposing a computationally efficient Kronecker product-based proximal algorithm, which allows for the evaluation of time-varying effects in large-scale studies. Additionally, our package allows for parallel computing and can handle moderate to large sample sizes more efficiently than current methods.
 
-
 In our statistical software tutorial, we address a common issue encountered when analyzing data with binary covariates with near-zero variation. For example, in the SEER prostate cancer data, only 0.6% of the 716,553 patients had their tumors regional to the lymph nodes. In such cases, the associated observed information matrix of a Newton-type method may have a minimum eigenvalue close to zero and a large condition number. Inverting this nearly singular matrix can lead to numerical instability and the corresponding Newton updates may be confined within a small neighborhood of the initial value, resulting in estimates that are far from the optimal solutions. To address this problem, our proposed Proximal-Newtown method utilizes a modified Hessian matrix, which allows for accurate estimation in these scenarios.
 
 ## Models:
+
 <table>
     <tr>
         <th>Method</th>
@@ -220,6 +217,7 @@ In our statistical software tutorial, we address a common issue encountered when
 </table>
 
 ## Penalzation Coefficient Selection Methods:
+
 <table>
     <tr>
         <th>Method</th>
@@ -317,8 +315,8 @@ The SUPPORT dataset is available in the "surtvep" package. The following code wi
     </tr>
 </table>
 
-
 ## Real Datasets:
+
 <table>
     <tr>
         <th>Dataset</th>
@@ -337,10 +335,9 @@ The SUPPORT dataset is available in the "surtvep" package. The following code wi
     </tr>
 </table>
 
-
 # Installation
 
-**Note:** *This package is still in its early stages of development, so please don't hesitate to report any problems you may experience.* 
+**Note:** _This package is still in its early stages of development, so please don't hesitate to report any problems you may experience._
 
 The package only works for R 4.1.0+.
 
@@ -353,7 +350,6 @@ You can install 'surtvep' via:
 
 We recommand to start with <a href="https://um-kevinhe.github.io/surtvep/articles/surtvep.html#quick-start" target="_blank">tutorial</a>, as it provides an overview of the package's usage, including preprocessing, model training, selection of penalization parameters, and post-estimation procedures.
 
-
 ## Detailed tutorial
 
 For detailed tutorial and model paramter explaination, please go to <a href="https://um-kevinhe.github.io/surtvep/index.html" target="_blank">here</a>
@@ -362,10 +358,6 @@ For detailed tutorial and model paramter explaination, please go to <a href="htt
 
 If you encounter any problems or bugs, please contact us at: [lfluo\@umich.edu](mailto:lfluo@umich.edu){.email}, [xuetao\@umich.edu](mailto:xuetao@umich.edu){.email}
 
-
-
 # References
 
-  \[1\] Wenbo Wu, Jeremy M G Taylor, Andrew F Brouwer, Lingfeng Luo, Jian Kang, Hui Jiang and Kevin He. Scalable proximal Methods for cause-specific hazard modeling with time-varying coefficients. *Lifetime Data Analysis*, 28(2):194-218, 2022. \[[paper](https://pubmed.ncbi.nlm.nih.gov/35092553/)\]
-
->>>>>>> 9a2f88b98bda0338ea9c6ecf6548bc57881c8a1c
+\[1\] Wenbo Wu, Jeremy M G Taylor, Andrew F Brouwer, Lingfeng Luo, Jian Kang, Hui Jiang and Kevin He. Scalable proximal Methods for cause-specific hazard modeling with time-varying coefficients. _Lifetime Data Analysis_, 28(2):194-218, 2022. \[[paper](https://pubmed.ncbi.nlm.nih.gov/35092553/)\]
